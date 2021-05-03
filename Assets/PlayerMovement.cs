@@ -32,7 +32,7 @@ public class PlayerMovement : MonoBehaviour
         isGrounded = Physics2D.OverlapArea(groundCheckerLeft.position, groundCheckerRight.position);
         if (isGrounded == true)
         {
-            jumpNumber = 2;
+            jumpNumber = 1;
         }
 
         float horizontalMovement = Input.GetAxis("Horizontal") * moveSpeed * Time.deltaTime; 

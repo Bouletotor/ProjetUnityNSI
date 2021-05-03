@@ -1322,7 +1322,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 300
-  jumpForce: 400
+  jumpForce: 300
   jumpNumber: 2
   groundCheckerLeft: {fileID: 1771417815}
   groundCheckerRight: {fileID: 921036186}

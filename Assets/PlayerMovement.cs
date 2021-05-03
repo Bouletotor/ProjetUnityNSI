@@ -5,7 +5,8 @@ public class PlayerMovement : MonoBehaviour
     public float moveSpeed;
     public float jumpForce;
 
-    public bool isJumping;
+    private bool isJumping;
+    private bool isGrounded;
 
     public Transform groundCheckerLeft;
     public Transform groundCheckerRight;
@@ -15,9 +16,11 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
+        isGrounded = Physics2D.OverlapArea(groundCheckerLeft.position, groundCheckerRight.position);
+
         float horizontalMovement = Input.GetAxis("Horizontal") * moveSpeed * Time.deltaTime; 
 
-        if (Input.GetButtonDown("Jump"))
+        if (Input.GetButton("Jump") && isGrounded)
         {
             isJumping = true;
         }

@@ -4,7 +4,7 @@ public class PlayerMovement : MonoBehaviour
 {
     public float moveSpeed;
     public float jumpForce;
-    public float jumpNumber = 2;
+    public float jumpNumber;
 
     private bool isJumping;
     private bool isGrounded;

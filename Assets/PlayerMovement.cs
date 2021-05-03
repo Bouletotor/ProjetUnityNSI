@@ -4,6 +4,7 @@ public class PlayerMovement : MonoBehaviour
 {
     public float moveSpeed;
     public float jumpForce;
+    public float jumpNumber = 2;
 
     private bool isJumping;
     private bool isGrounded;
@@ -20,12 +21,17 @@ public class PlayerMovement : MonoBehaviour
     void FixedUpdate()
     {
         isGrounded = Physics2D.OverlapArea(groundCheckerLeft.position, groundCheckerRight.position);
+        if (isGrounded == true)
+        {
+            jumpNumber = 2;
+        }
 
         float horizontalMovement = Input.GetAxis("Horizontal") * moveSpeed * Time.deltaTime; 
 
-        if (Input.GetButton("Jump") && isGrounded)
+        if (Input.GetButtonDown("Jump") && jumpNumber > 0)
         {
             isJumping = true;
+            jumpNumber -= 1;
         }
 
         MovePlayer(horizontalMovement);

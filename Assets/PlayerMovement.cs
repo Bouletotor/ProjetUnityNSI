@@ -6,7 +6,6 @@ public class PlayerMovement : MonoBehaviour
 {
     public float moveSpeed;
     public float jumpForce;
-    private float jumpNumber = 2;
 
     public bool isJumping;
 
@@ -20,10 +19,9 @@ public class PlayerMovement : MonoBehaviour
     {
         float horizontalMovement = Input.GetAxis("Horizontal") * moveSpeed * Time.deltaTime; 
 
-        if (Input.GetButtonDown("Jump") && jumpNumber > 0)
+        if (Input.GetButtonDown("Jump"))
         {
             isJumping = true;
-            jumpNumber -= 1;
         }
 
         MovePlayer(horizontalMovement);

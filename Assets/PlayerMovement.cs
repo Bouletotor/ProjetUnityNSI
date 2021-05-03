@@ -16,7 +16,16 @@ public class PlayerMovement : MonoBehaviour
     public Animator animator;
     public SpriteRenderer spriteRenderer;
 
-    private Vector3 velocity = Vector3.zero; 
+    private Vector3 velocity = Vector3.zero;
+
+    void Update()
+    {
+        if (Input.GetButtonDown("Jump") && jumpNumber > 0)
+        {
+            isJumping = true;
+            jumpNumber -= 1;
+        }
+    }
 
     void FixedUpdate()
     {
@@ -28,11 +37,7 @@ public class PlayerMovement : MonoBehaviour
 
         float horizontalMovement = Input.GetAxis("Horizontal") * moveSpeed * Time.deltaTime; 
 
-        if (Input.GetButtonDown("Jump") && jumpNumber > 0)
-        {
-            isJumping = true;
-            jumpNumber -= 1;
-        }
+        
 
         MovePlayer(horizontalMovement);
 

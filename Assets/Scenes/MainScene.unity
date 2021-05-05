@@ -296,8 +296,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 342626807}
-  - component: {fileID: 342626809}
   - component: {fileID: 342626808}
+  - component: {fileID: 342626809}
   m_Layer: 0
   m_Name: WeakPoint
   m_TagString: Untagged
@@ -313,7 +313,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 342626806}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.08896518, y: 0.36584258, z: -61.68025}
+  m_LocalPosition: {x: -0.112, y: 0.245, z: -61.68025}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 539735423}
@@ -344,7 +344,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.03958869, y: -0.024315715}
+  m_Offset: {x: 0.1065563, y: 0.10412985}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -355,7 +355,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.4025302, y: 0.10716319}
+  m_Size: {x: 0.32522988, y: 0.04290116}
   m_EdgeRadius: 0
 --- !u!1 &413505355
 GameObject:
@@ -1220,6 +1220,7 @@ GameObject:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
+  - component: {fileID: 519420030}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1235,6 +1236,21 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_Enabled: 1
+--- !u!114 &519420030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7686c6223f38924c8746eaccede9348, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1733454815}
+  timeOffset: 0.25
+  posOffset: {x: 2, y: 2, z: -10}
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -1286,7 +1302,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2, z: -10}
+  m_LocalPosition: {x: 0, y: -0.59, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1328,6 +1344,7 @@ MonoBehaviour:
   waypoints:
   - {fileID: 1774148367}
   - {fileID: 241719116}
+  damage: 10
   enemy: {fileID: 539735422}
 --- !u!114 &539735420
 MonoBehaviour:
@@ -1355,7 +1372,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0124953985, y: -0.12278098}
+  m_Offset: {x: -0.0124953985, y: -0.07754159}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1366,7 +1383,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.53072524, y: 0.75443804}
+  m_Size: {x: 0.53072524, y: 0.8449168}
   m_EdgeRadius: 0
 --- !u!212 &539735422
 SpriteRenderer:
@@ -2559,7 +2576,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1733454815}
   m_LocalRotation: {x: -0, y: 0.026490277, z: -0, w: 0.9996491}
-  m_LocalPosition: {x: 0.192, y: -0.57, z: 0.03}
+  m_LocalPosition: {x: 0, y: -0.5959878, z: 0.03}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1771417815}
@@ -2615,7 +2632,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
-  currentHealth: 0
+  currentHealth: 100
+  InvincibilityTime: 2
+  flashDelay: 0.25
+  isInvincible: 0
+  graphics: {fileID: 1733454819}
   healthBar: {fileID: 58456303}
 --- !u!1 &1771417814
 GameObject:

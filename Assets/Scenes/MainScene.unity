@@ -1202,7 +1202,7 @@ TilemapCollider2D:
   m_GameObject: {fileID: 426861454}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: e3bfaa47b2dafec4794264a9540c555b, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -2437,12 +2437,11 @@ GameObject:
   m_Component:
   - component: {fileID: 1733454820}
   - component: {fileID: 1733454819}
-  - component: {fileID: 1733454818}
   - component: {fileID: 1733454817}
   - component: {fileID: 1733454816}
   - component: {fileID: 1733454821}
-  - component: {fileID: 1733454822}
   - component: {fileID: 1733454823}
+  - component: {fileID: 1733454822}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -2467,7 +2466,7 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 1.5
   m_Material: {fileID: 0}
-  m_Interpolate: 0
+  m_Interpolate: 2
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
@@ -2486,37 +2485,12 @@ MonoBehaviour:
   moveSpeed: 300
   jumpForce: 320
   jumpNumber: 0
+  isGrounded: 0
   groundCheckerLeft: {fileID: 1771417815}
   groundCheckerRight: {fileID: 921036186}
   rb: {fileID: 1733454816}
   animator: {fileID: 1733454821}
   spriteRenderer: {fileID: 1733454819}
---- !u!61 &1733454818
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1733454815}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.00024187565, y: 0.0109933615}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.65625, y: 0.8125}
-    newSize: {x: 0.65625, y: 0.8125}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.5991887, y: 0.7891791}
-  m_EdgeRadius: 0
 --- !u!212 &1733454819
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2603,8 +2577,8 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!58 &1733454822
-CircleCollider2D:
+--- !u!70 &1733454822
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -2616,9 +2590,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.045938414, y: -0.22725993}
-  serializedVersion: 2
-  m_Radius: 0.18701446
+  m_Offset: {x: 0.059569996, y: 0.001062274}
+  m_Size: {x: 0.5200914, y: 0.81037545}
+  m_Direction: 0
 --- !u!114 &1733454823
 MonoBehaviour:
   m_ObjectHideFlags: 0

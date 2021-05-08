@@ -322,7 +322,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 120300266}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d8da7734f118bf0479c0c77a81eb4d1b, type: 3}
+  m_Script: {fileID: 11500000, guid: 2a4d1a280553a1e46a16a75748b4857f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   texteUI: {fileID: 1466357995}
@@ -3070,6 +3070,33 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1306271108251675992, guid: 42398bb4735a4694bbdd5d45757e291b, type: 3}
   m_PrefabInstance: {fileID: 1306271106660828807}
   m_PrefabAsset: {fileID: 0}
+--- !u!50 &1733454819 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 1306271108251676007, guid: 42398bb4735a4694bbdd5d45757e291b, type: 3}
+  m_PrefabInstance: {fileID: 1306271106660828807}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &1733454821 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 1306271108251676004, guid: 42398bb4735a4694bbdd5d45757e291b, type: 3}
+  m_PrefabInstance: {fileID: 1306271106660828807}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1733454823
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1733454815}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e4701b90f3ffce48902c042587a3614, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 1733454819}
+  spriteRenderer: {fileID: 1733454821}
+  dashForceInit: 800
+  isDashing: 0
+  canDash: 1
 --- !u!1 &1862546857
 GameObject:
   m_ObjectHideFlags: 0

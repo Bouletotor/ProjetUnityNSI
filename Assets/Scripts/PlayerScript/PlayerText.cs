@@ -28,7 +28,6 @@ public class PlayerText : MonoBehaviour
     {
         texte = "";
         texteUI.text = texte;
-        
     }
     
 }

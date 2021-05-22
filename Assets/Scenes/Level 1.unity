@@ -227,7 +227,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slider: {fileID: 58456302}
-  fill: {fileID: 1463239589}
   gradient:
     serializedVersion: 2
     key0: {r: 1, g: 0, b: 0, a: 1}
@@ -257,6 +256,7 @@ MonoBehaviour:
     m_Mode: 0
     m_NumColorKeys: 4
     m_NumAlphaKeys: 2
+  fill: {fileID: 1463239589}
 --- !u!1 &91393806
 GameObject:
   m_ObjectHideFlags: 0
@@ -304,7 +304,6 @@ GameObject:
   - component: {fileID: 181985513}
   - component: {fileID: 181985512}
   - component: {fileID: 181985511}
-  - component: {fileID: 181985514}
   m_Layer: 0
   m_Name: Tuto1
   m_TagString: Untagged
@@ -403,19 +402,6 @@ Transform:
   m_Father: {fileID: 736818314}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &181985514
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 181985510}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d8da7734f118bf0479c0c77a81eb4d1b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  texteUI: {fileID: 1466357995}
 --- !u!1 &350598894
 GameObject:
   m_ObjectHideFlags: 0
@@ -9774,7 +9760,6 @@ GameObject:
   - component: {fileID: 935122900}
   - component: {fileID: 935122902}
   - component: {fileID: 935122901}
-  - component: {fileID: 935122903}
   m_Layer: 0
   m_Name: Tuto2
   m_TagString: Untagged
@@ -9873,19 +9858,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &935122903
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 935122899}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a4d1a280553a1e46a16a75748b4857f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  texteUI: {fileID: 1466357995}
 --- !u!1 &1181062190
 GameObject:
   m_ObjectHideFlags: 0
@@ -10009,11 +9981,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
-  damage: 10
-  enemy: {fileID: 1181062192}
   waypoints:
   - {fileID: 1284209978}
   - {fileID: 1606335650}
+  damage: 10
+  enemy: {fileID: 1181062192}
 --- !u!1 &1198077122
 GameObject:
   m_ObjectHideFlags: 0
@@ -11471,29 +11443,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64b5d6af3b34ba54481b899a4e1eed35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< HEAD
-  collisionLayers:
-    serializedVersion: 2
-    m_Bits: 0
   texteUI: {fileID: 1466357995}
---- !u!58 &1733454817
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1733454815}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.4
-=======
->>>>>>> 1a05161335b0c5fe1072ba5ac1863e60727e48f5
 --- !u!50 &1733454819 stripped
 Rigidbody2D:
   m_CorrespondingSourceObject: {fileID: 1306271108251676007, guid: 42398bb4735a4694bbdd5d45757e291b, type: 3}
@@ -11519,8 +11469,6 @@ MonoBehaviour:
   rb: {fileID: 1733454819}
   spriteRenderer: {fileID: 1733454821}
   dashForceInit: 1200
-  isDashing: 0
-  canDash: 1
 --- !u!1 &1862546857
 GameObject:
   m_ObjectHideFlags: 0

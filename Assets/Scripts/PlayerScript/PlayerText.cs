@@ -3,6 +3,7 @@ using UnityEngine.UI;
 
 public class PlayerText : MonoBehaviour
 {
+    public LayerMask collisionLayers;
     private string texte = "";
     public Text texteUI;
 
@@ -26,5 +27,8 @@ public class PlayerText : MonoBehaviour
     void OnTriggerExit2D(Collider2D collision)
     {
         texte = "";
+        texteUI.text = texte;
+        
     }
+    
 }

@@ -227,6 +227,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slider: {fileID: 58456302}
+  fill: {fileID: 1463239589}
   gradient:
     serializedVersion: 2
     key0: {r: 1, g: 0, b: 0, a: 1}
@@ -256,7 +257,6 @@ MonoBehaviour:
     m_Mode: 0
     m_NumColorKeys: 4
     m_NumAlphaKeys: 2
-  fill: {fileID: 1463239589}
 --- !u!1 &91393806
 GameObject:
   m_ObjectHideFlags: 0
@@ -9474,7 +9474,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1733454815}
   timeOffset: 0.25
-  posOffset: {x: 0, y: 0, z: -10}
+  posOffset: {x: 2, y: 0, z: -10}
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -9981,11 +9981,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
+  damage: 10
+  enemy: {fileID: 1181062192}
   waypoints:
   - {fileID: 1284209978}
   - {fileID: 1606335650}
-  damage: 10
-  enemy: {fileID: 1181062192}
 --- !u!1 &1198077122
 GameObject:
   m_ObjectHideFlags: 0
@@ -11443,7 +11443,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64b5d6af3b34ba54481b899a4e1eed35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  texteUI: {fileID: 1466357995}
 --- !u!61 &1733454817
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11495,6 +11494,8 @@ MonoBehaviour:
   rb: {fileID: 1733454819}
   spriteRenderer: {fileID: 1733454821}
   dashForceInit: 1200
+  isDashing: 0
+  canDash: 1
 --- !u!1 &1862546857
 GameObject:
   m_ObjectHideFlags: 0

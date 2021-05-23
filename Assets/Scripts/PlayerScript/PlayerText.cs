@@ -5,6 +5,7 @@ public class PlayerText : MonoBehaviour
 {   
     //Créer une variable texte dans un interface
     public Text texteUI;
+    public Text titleUI;
 
     void OnTriggerEnter2D(Collider2D collision)
     {
@@ -27,11 +28,17 @@ public class PlayerText : MonoBehaviour
         {
             texteUI.text = "Cet ennemi etait faible, chaque ennemi n'a besoin que d'une seule attaque pour etre vaincue, seulement il faut trouver le point faible";
         }
+        else if (collision.gameObject.name == "Darkaneky")
+        {
+            texteUI.text = "Bien joué, tu as reussi à battre les ennemis. Maintenant prends cet objet beni par l'apôtre du Saint Badlands Chugs";
+            titleUI.text = "Darkaneky";
+        }
     }
 
     void OnTriggerExit2D(Collider2D collision)
     {
         texteUI.text = "";
+        titleUI.text = "";
     }
     
 }

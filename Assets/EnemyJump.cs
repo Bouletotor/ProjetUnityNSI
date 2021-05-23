@@ -31,7 +31,7 @@ public class EnemyJump : MonoBehaviour
     IEnumerator JumpInterval()
     {
         isJumpIntervalRunning = true;
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(1.8f);
         canJump = true;
         isJumpIntervalRunning = false;
     }

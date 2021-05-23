@@ -26,7 +26,7 @@ public class EnemyPatrol : MonoBehaviour
     {
         // Déplcement de enemy
         Vector3 dir = target.position - transform.position; // On définit le déplacement à effectuer entre la cible et la position actuelle de enemy
-        transform.Translate(dir.normalized * speed * Time.deltaTime, Space.World); // On déplace par une translation enemy
+        transform.Translate(dir.normalized * speed * Time.deltaTime, Space.World); // On déplace par une translation ennemy
 
         if (Vector3.Distance(transform.position, target.position) < 0.3f) // Si la norme du vecteur (différence de la position actuelle de enemy et sa cible) est inférieure à 0.3 (valeur normalisée)
         {

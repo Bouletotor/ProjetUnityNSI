@@ -9,12 +9,15 @@ public class PlayerAttack : MonoBehaviour
 
     public float dashForceInit;
     private float dashForce;
-    public bool isDashing;
-    public bool canDash = true;
+
+    public static bool isDashing;
+    public bool test;
+    private bool canDash = true;
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0) && isDashing == false && canDash == true)
+        test = isDashing;
+        if (Input.GetMouseButtonDown(0) && isDashing == false && canDash)
         {
             isDashing = true;
             if (spriteRenderer.flipX == false)
@@ -26,7 +29,7 @@ public class PlayerAttack : MonoBehaviour
                 dashForce = -dashForceInit;
             }
             canDash = false;
-            StartCoroutine (DashInterval(2f));
+            StartCoroutine (DashInterval(1.5f));
         }
     }
 
@@ -46,7 +49,13 @@ public class PlayerAttack : MonoBehaviour
 
     void DashPlayer(float _dashForce)
     {
+        StartCoroutine(DashTime(0.1f));
         rb.AddForce(new Vector2(_dashForce, 0f));
+    }
+
+    IEnumerator DashTime(float _dashTime)
+    {
+        yield return new WaitForSeconds(_dashTime);
         isDashing = false;
     }
 }

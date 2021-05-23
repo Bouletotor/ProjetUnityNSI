@@ -23,6 +23,10 @@ public class PlayerText : MonoBehaviour
         {
             texteUI.text = "Voici votre premier ennemie, appuyez sur [Clic gauche] pour l'attaquer";
         }
+        else if (collision.gameObject.name == "Tuto4")
+        {
+            texteUI.text = "Cet ennemi etait faible, chaque ennemi n'a besoin que d'une seule attaque pour etre vaincue, seulement il faut trouver le point faible";
+        }
     }
 
     void OnTriggerExit2D(Collider2D collision)

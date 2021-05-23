@@ -1,9 +1,8 @@
 using UnityEngine;
 
-public class EnnemyDeath : MonoBehaviour
+public class SnakeDeath : MonoBehaviour
 {
     public GameObject objectToDestroy;
-    public GameObject Player;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

@@ -30,7 +30,7 @@ public class PlayerText : MonoBehaviour
         }
         else if (collision.gameObject.name == "Darkaneky")
         {
-            texteUI.text = "Bien joué, tu as reussi à battre les ennemis. Maintenant prends cet objet beni par l'apôtre du Saint Badlands Chugs";
+            texteUI.text = "Bien joue, tu as reussi a battre les ennemis. Maintenant prends cette amulette beni par l'apotre du Saint Badlands Chugs";
             titleUI.text = "Darkaneky";
         }
     }

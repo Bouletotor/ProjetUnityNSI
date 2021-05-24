@@ -5,7 +5,8 @@ public class PlayerMovement : MonoBehaviour
     //Les variables de type public sont modifiables directement depuis unity (ce qui est pratique pour une variable de type sprite ou gameobject)
     public float moveSpeed;
     public float jumpForce;
-    public int jumpNumber;
+    private int jumpLeft;
+    public static int jumpNumber = 0;
 
     //Si une variable n'est pas destinée à être ajustée alors on va la mettre en private
     private bool isJumping;
@@ -27,15 +28,19 @@ public class PlayerMovement : MonoBehaviour
     //mais ce qu'il faut retenir c'est qu'il faut utiliser FixedUpdate pour les éléments d'unity tels que des RigidBody
     void Update()
     {
-        if (Input.GetButtonDown("Jump") && jumpNumber > 0)
+        if (Input.GetButtonDown("Jump"))
         {
-            isJumping = true;
-            jumpNumber -= 1;
+            if (jumpLeft > 0 || isGrounded)
+            {
+                isJumping = true;
+                jumpLeft -= 1;
+            }
+            
         }
 
         if (isGrounded == true)
         {
-            jumpNumber = 1;
+            jumpLeft = jumpNumber;
         }
 
         Flip(rb.velocity.x);//Appelle la fonction flip

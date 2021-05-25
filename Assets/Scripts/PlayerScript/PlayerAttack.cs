@@ -1,22 +1,28 @@
+// Script permettant au joueur de faire une attaque (dash)
+
+// Importation de modules propres à Unity
 using System.Collections;
 using UnityEngine;
 
 public class PlayerAttack : MonoBehaviour
 {
+    // On récupère en variable la physique du monstre ainsi que ses rendus
     public Rigidbody2D rb;
-    public static bool isAttack;
     public SpriteRenderer spriteRenderer;
 
+    // On crée des variables relatives à la force du dash
     public float dashForceInit;
     private float dashForce;
 
+    // On crée des booléens permettants de tester si le joueur peux dash ou non
+    public static bool isAttack;
     public static bool isDashing;
     public bool test;
     private bool canDash = true;
 
-    void Update()
+    void Update() // Appel à la fonction chaque frames
     {
-        test = isDashing;
+        test = isDashing; 
         if (Input.GetMouseButtonDown(0) && isDashing == false && canDash)
         {
             isDashing = true;
@@ -33,7 +39,7 @@ public class PlayerAttack : MonoBehaviour
         }
     }
 
-    void FixedUpdate()
+    void FixedUpdate() // Appel à la fonction 50 fois par secondes (synchronisation au niveau du système de physique)
     {
         if(isDashing == true)
         {

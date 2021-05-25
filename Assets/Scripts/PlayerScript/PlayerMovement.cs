@@ -6,7 +6,7 @@ public class PlayerMovement : MonoBehaviour
     public float moveSpeed;
     public float jumpForce;
     private int jumpLeft;
-    public static int jumpNumber = 0;
+    public static int jumpNumber = 1;
 
     //Si une variable n'est pas destinée à être ajustée alors on va la mettre en private
     private bool isJumping;

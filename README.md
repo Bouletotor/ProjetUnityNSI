@@ -36,3 +36,5 @@ Les components sont des élements de Unity permettant d'associer des fonctionnal
 - Start() : fonction appelée au lancement du programme
 - Awake() : fonction appelée quand le script est utilisé
 - IEnumerator "Coroutine"() : fonction particulière qui n'est pas interrompue mais mise en pause contrairement à une routine qui elle, se termine
+
+Un ScriptableObject est un conteneur de données qui est utilisé pour enregistrer de grandes quantités de données, indépendamment des instances de classe. L’un des principaux cas d’utilisation de ScriptableObjects est de réduire l’utilisation de la mémoire de votre projet en évitant les copies de valeurs.

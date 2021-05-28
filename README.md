@@ -4,7 +4,7 @@
 ## A Propos du Projet : 
 
 Le but était d'apprendre les bases de Unity et du C# en créant une ébauche de platformer 2D. Il est composé d'un seul niveau tutoriel qui navigue entre plusieurs scènes.
-Vous y trouverez un système de mort, des panneaux tutoriels, un PNJ ainsi que des ennemis.
+Vous y trouverez des ennemis, un système de saut où l'on peut modifier le nombre de saut, un système permettant de replacer le joueur lorsqu'il fait une chute, un système de points de vie, un système de changement de scène ainsi que de nombreuses animations et de petits tutoriels.
 Le projet est une sorte de démo, cela implique qu'il n'y a pas de système de sauvegarde, pas de menu d'accueil et de pause et qu'il n'y a pas grand chose à faire. C'est plus une démonstration de ce que l'on a pu faire qu'un jeu à proprement parler.
 
 
@@ -38,3 +38,23 @@ Les components sont des élements de Unity permettant d'associer des fonctionnal
 - IEnumerator "Coroutine"() : fonction particulière qui n'est pas interrompue mais mise en pause contrairement à une routine qui elle, se termine
 
 Un ScriptableObject est un conteneur de données qui est utilisé pour enregistrer de grandes quantités de données, indépendamment des instances de classe. L’un des principaux cas d’utilisation de ScriptableObjects est de réduire l’utilisation de la mémoire de votre projet en évitant les copies de valeurs.
+
+
+## Quelques indications en jeu : 
+
+Le PNJ vous donne un objet qui est bien présent dans l'inventaire du Joueur et qui ajoute un saut après son obtention mais qui n'est pas visible à travers le jeu. Par manque de temps, nous n'avons pas eu le temps de faire une interface permettant d'afficher l'inventaire. 
+Pour ce qui est du système de points de vie, nous n'avons pas non plus eu le temps de faire mourir le joueur car cela venait poser problème au niveau de la mort des ennemis, en effet, nous les faisons mourir d'une manière peu orthodoxe : nous les détruisons ! Cela rend donc leur réapparition compliquée si le joueur venait à mourir même si en soi, le faire mourir n'est pas très complique, il suffirait de tester si le joueur à moins de 0 ou 0 PV.
+
+
+## A propos des fichiers :
+
+Ci-joint, vous trouverez une première version du jeu en .exe, l'executable qui vous permettra de jouer au jeu comfortablement, dans le fichier "Projet", vous trouverez la version que nous avons développé sous la forme du projet Unity, pour voir nos scripts, il vous faudra aller dans Assets > Scripts, seul les fichier .cs sont importants et non les .cs.meta. 
+
+
+## Liens et autres :
+
+Pour ce qui est des graphismes, Gabin a cree une sprite (et animations) : le PNJ. Pour ce qui est du reste, nous avons surtout pris cette tilesheet :
+https://opengameart.org/content/a-platformer-in-the-forest
+
+
+Merci d'avoir lu ce README et à bientôt !

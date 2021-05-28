@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Snake
   - PlayerSpawn
+  - FadeSystem
   layers:
   - Default
   - TransparentFX

@@ -6,7 +6,7 @@ public class PlayerMovement : MonoBehaviour
     public float moveSpeed;
     public float jumpForce;
     private int jumpLeft;
-    public static int jumpNumber = 1;
+    public static int jumpNumber = 0; // On définit le saut à 0 car lorsque l'on commence à sauter, le test isGrounded est vrai donc le jeu nous redonne un saut
 
     //Si une variable n'est pas destinée à être ajustée alors on va la mettre en private
     private bool isJumping;
@@ -28,7 +28,7 @@ public class PlayerMovement : MonoBehaviour
     //mais ce qu'il faut retenir c'est qu'il faut utiliser FixedUpdate pour les éléments d'unity tels que des RigidBody
     void Update()
     {
-        if (Input.GetButtonDown("Jump"))
+        if (Input.GetButtonDown("Jump")) // "Jump" est définie de base sur la touche espace sur unity
         {
             if (jumpLeft > 0 || isGrounded)
             {
